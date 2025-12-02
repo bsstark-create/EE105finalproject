@@ -459,10 +459,11 @@ void m3_ppg(){
 
   ppg.begin();
   ppg.setup();
-  ppg.setPulseAmplitudeRed(0x7F);
-  ppg.setPulseAmplitudeIR(0x7F);
-  ppg.setPulseAmplitudeGreen(0x7F);
-  ppg.setPulseAmplitudeBlue(0x7F);
+  ppg.setPulseAmplitudeRed(0xFF);
+  ppg.setPulseAmplitudeIR(0xFF);
+  ppg.setPulseAmplitudeGreen(0xFF);
+  ppg.setPulseAmplitudeBlue(0xFF);
+
 
   while(1){
     Serial.print(ppg.getIR());  // IR
@@ -709,3 +710,4 @@ void detect_exercise_type() {
   Serial.println();
   Serial.println("Ready to enter next command");
 }
+
